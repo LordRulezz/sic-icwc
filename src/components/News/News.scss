@@ -1,0 +1,213 @@
+.news__flip .container {
+    display: grid;
+    grid-template-columns: 43% 57%;
+    grid-template-rows: 95%;
+
+    @include media(992) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+    }
+}
+
+.news__flip {
+    margin-top: 30px;
+    @include media(992){
+        
+    }
+}
+
+/* flip Cards */
+
+
+.flip__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    @include media(992){
+        grid-column: span 4;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        gap: 10px;
+    }
+}
+
+.flip-card {
+    background-color: transparent;
+    float: left;
+    width: 500px;
+    height: 250px;
+    margin-bottom: 4px;
+    @include media(1200) {
+        width: 400px;
+        height: 250px;
+    }
+    @include media(992){
+        width: 350px;
+        height: 300px;
+    }
+    @include media(768){
+        grid-column: span 2;
+        width: 100%;
+    }
+
+
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateX(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    padding-left: 8px;
+    padding-top: 10px;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+/* cards */
+.flip-card-front {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    background-color: var(--blue);
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.fc1 {  
+    background-color: var(--tera);
+}
+
+.fc2 {
+    background-color: var(--elBg);
+}
+
+.fc3 {
+    background-color: var(--green);
+}
+
+
+.flip-card-back {
+    background-color: #e3e2e2;
+    color: white;
+    transform: rotateX(180deg);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding: 10px 0 10px 0;
+}
+.flip-card-title{
+    font-size: 25px;
+    
+}
+
+.flip-card-back p {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 12pt;
+    color: #000;
+    text-align: left;
+    padding-left: 8px;
+}
+
+.flip__card-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* NEws */
+
+.news {
+    padding-left: 20px;
+    @include media(992) {
+        grid-column: span 4;
+        margin-bottom: 20px;
+    }
+}
+
+.news__h3 {
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.news__h3::after {
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.news__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.news__item-desc {
+    width: 75%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.news__item-desc a {
+    color: var(--elBg);
+}
+
+.news__data {
+    background-color: var(--blue);
+    color: #fff;
+    padding: 3px;
+    width: 80px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.news__item-img {
+    width: 170px;
+    height: 120px;
+    position: relative;
+}
+
+.news__item-img img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.all__news {
+    float: right;
+}
