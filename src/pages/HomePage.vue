@@ -1,6 +1,6 @@
 <template>
 
-    <Event event-image="src/assets/images/AralAI.jpg"
+    <Event event-image="@/assets/images/AralAI.jpg"
       event-title="Первое событие"
       event-description="Описание первого события"
       eventBtn="Подробнее >>"/>

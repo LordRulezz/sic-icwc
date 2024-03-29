@@ -1,5 +1,5 @@
 <template>
-  <Event event-image="src/assets/images/bg_about.jpg"
+  <Event event-image="@/assets/images/bg_about.jpg"
       event-title="О НИЦ МКВК"
       event-description="Научно-информационный центр Межгосударственной координационной водохозяйственной комиссии" />
 
