@@ -12,10 +12,15 @@
 </template>
 
 <script setup>
+
+import { defineProps } from 'vue';
+
 const props = defineProps({
   eventImage: String,
   eventTitle: String,
   eventDescription: String,
   eventBtn: String
 });
+
+
 </script>

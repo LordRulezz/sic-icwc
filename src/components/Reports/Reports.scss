@@ -1,0 +1,22 @@
+.reports{
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+
+&__item{
+    
+
+    &-link{
+display: flex;
+flex-direction: column;
+gap: 10px;
+
+& span{
+    color: black;
+    
+}
+
+    }
+}
+
+}

@@ -90,71 +90,24 @@
 
                 <div class="news">
                     <h3 class="news__h3 h3_title">Новости</h3>
-                    <div class="news__item">
+
+                    <a v-for="(item, index) in jsonData.slice(-5).reverse()" :key="index" class="news__item" :href="'public/release/rus/' + item.fileName">
                         <div class="news__item-desc">
-                            <h5 class="news__data">06.12.2023</h5>
-                            <p>НИЦ МКВК принял участие в <a
-                                    href="http://sic.icwc-aral.uz/releases/rus/441.htm">стартовой встрече региональной программы «Управление водными ресурсами в Центральной Азии с учетом климатического воздействия»</a> <br> (29 ноября 2023 г., Ташкент, Узбекистан)
-                            </p>
-                        </div>
-                        <div class="news__item-img">
-                            <img src="@/assets/images/news_img/news1.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="news__item">
-                        <div class="news__item-desc">
-                            <h5 class="news__data">07.09.2023</h5>
-                            <p>НИЦ МКВК принял участие в <a
-                                    href="http://cawater-info.net/expert-platform/roundtable_16aug2023.htm">«Международной
-                                    конференции по продовольственной безопасности»</a> <br> (7-8 сентября 2023г.,
-                                Самарканд, Узбекистан)
-                            </p>
+                            <h5 class="news__data">{{ item.date }}</h5>
+                            <p>{{ item.paragraph  }}</p>
 
                         </div>
                         <div class="news__item-img">
-                            <img src="@/assets/images/news_img/news2.png" alt="">
+                            <img :src="item.image" alt="">
                         </div>
-                    </div>
-                    <div class="news__item">
-                        <div class="news__item-desc">
-                            <h5 class="news__data">16.08.2023</h5>
-                            <p>Круглый стол, посвященный памяти проф. В.А. Духовного <a
-                                    href="http://cawater-info.net/expert-platform/roundtable_16aug2023.htm">«Повышение
-                                    эффективности
-                                    региональной координации в сфере водных ресурсов и энергетики в Центральной
-                                    Азии»</a>
-                            </p>
+                    </a>
 
-                        </div>
-                        <div class="news__item-img">
-                            <img src="@/assets/images/river.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="news__item">
-                        <div class="news__item-desc">
-                            <h5 class="news__data">26.01.2024</h5>
-                            <p><a href="src/release/rus/445.htm">«НИЦ МКВК провел встречу со студентами НИУ «ТИИИМСХ»»</a> <br> (26 января 2024 г., Ташкент, Узбекистан)
-                            </p>
-
-                        </div>
-                        <div class="news__item-img">
-                            <img src="@/assets/images/releases/260124.jpg" alt="">
-                        </div>
-                    </div>
-                    <div class="news__item">
-                        <div class="news__item-desc">
-                            <h5 class="news__data">25.01.2024</h5>
-                            <p>НИЦ МКВК принял участие в первом вебинаре <a
-                                href="src/release/rus/446.htm">«Межрегионального обучения преобразующей водной дипломатии (CROWD)»</a>
-                            </p>
-
-                        </div>
-                        <div class="news__item-img">
-                            <img src="@/assets/images/releases/260124-1.jpg" alt="">
-                        </div>
-                    </div>
                     <a href="arhive.htm" class="all__news">ВСЕ НОВОСТИ &gt;&gt;&gt;</a>
                 </div>
+
+
+                
+                
 
             </div>
         </section>
@@ -162,5 +115,9 @@
 
 <script setup>
 
+import jsonData from '@/news.json';
+
 </script>
+
+
 

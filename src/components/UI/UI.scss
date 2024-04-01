@@ -1,12 +1,10 @@
 .tabs {
-    // transform: translateY(-100px);
-    
+
     &__list {
         display: flex;
         margin-bottom: 20px;
-        justify-content: space-evenly;
-        // box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
-        
+        justify-content: start;
+
     }
 
     & button {
@@ -14,61 +12,66 @@
         border: none;
         background: none;
         padding: 10px;
-        // color: white;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-font-size: 20px;
+        font-size: 16px;
     }
 
 
-& button:focus {
-    outline: none;
-    background: var(--blue);
-    color: white;
+    & button:focus {
+        outline: none;
+        background: var(--blue);
+        color: white;
+    }
+
+    & button:hover {
+        background: var(--blue);
+        color: white;
+
+    }
+
+    &__text {
+
+        &-title {
+            font-size: 35px;
+            margin-bottom: 20px;
+            color: var(--blue);
+
+        }
+
+        &-p {
+            font-weight: 500;
+        }
+
+        & p {
+            font-size: 20px;
+            margin-bottom: 10px;
+            line-height: 1.3em;
+
+        }
+
+        &-h3 {
+            font-size: 30px;
+            margin: 20px 0;
+            color: var(--green);
+        }
+
+        &-ul {
+            font-size: 18px;
+            margin-bottom: 10px;
+            font-weight: 400;
+            // font-style: italic;
+            list-style: square;
+            margin-left: 20px;
+            line-height: 150%;
+        }
+
+
+
+    }
+
+
 }
 
-& button:hover {
-    background: var(--blue);
-    color: white;
- 
-}
-
-&__text{
-
-    &-title{
-        font-size: 35px;
-        margin-bottom: 20px;
-        color: var(--blue);
-
-    }
-
-    & p{
-        font-size: 20px;
-     margin-bottom: 10px;
-    }
-
-    &-h3{
-        font-size: 30px;
-        margin-bottom: 20px;
-        color: var(--green); 
-    }
-
-    &-ul{
-        font-size: 18px; 
-        margin-bottom: 10px;
-        font-weight: 400;
-        font-style: italic;
-        list-style: square;
-        margin-left: 20px;
-        line-height: 150%;
-    }
-    
-
-
-}
-
-
-}
-
-.structure{
+.structure {
     display: flex;
 }
